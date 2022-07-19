@@ -99,7 +99,7 @@ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent %}
       </p>
       <p>
         {% from "govuk/components/button/macro.njk" import govukButton %} {{
-        govukButton({ text: "Continue" }) }}
+        govukButton({ text: "Continue", href: "check-answers" }) }}
       </p>
     </form>
   </div>
