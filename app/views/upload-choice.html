@@ -39,14 +39,11 @@ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent %}
         </fieldset>
       </div>
       <div class="govuk-button-group">
-        <button
-          class="govuk-button govuk-button--secondary"
-          data-module="govuk-button"
-        >
-          Save progress
-        </button>
         {% from "govuk/components/button/macro.njk" import govukButton %} {{
-          govukButton({ text: "Continue", href: "upload-your-document.html" }) }}
+        govukButton({ text: "Save progress", classes: "govuk-button--secondary",
+        href: "sign-up.html" }) }} {% from "govuk/components/button/macro.njk"
+        import govukButton %} {{ govukButton({ text: "Continue", href:
+        "upload-your-document.html" }) }}
       </div>
     </form>
   </div>
