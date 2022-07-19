@@ -32,7 +32,9 @@ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent %}
         </div>
       </fieldset>
 
-      <button class="govuk-button" data-module="govuk-button">Continue</button>
+      {% from "govuk/components/button/macro.njk" import govukButton %} {{
+      govukButton({ text: "Continue", href: "registration-confirmation.html" })
+      }}
     </form>
   </div>
 </div>
