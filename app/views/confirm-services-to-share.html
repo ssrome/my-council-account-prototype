@@ -1,0 +1,108 @@
+{% extends "layout.html" %} {% block pageTitle %} Question page template – {{
+serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Confirm you are happy to share this with all council services
+    </h1>
+
+    <form class="form" action="/url/of/next/page" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <!-- <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Confirm you are happy to share this with all council services
+            </h1>
+          </legend> -->
+
+          <div id="waste-hint" class="govuk-hint">Select all that apply.</div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="housing"
+                name="housing"
+                type="checkbox"
+                value="housing"
+              />
+              <label class="govuk-label govuk-checkboxes__label" for="housing">
+                Housing
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="benefits"
+                name="benefits"
+                type="checkbox"
+                value="benefits"
+              />
+              <label class="govuk-label govuk-checkboxes__label" for="benefits">
+                Benefits
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="schools-and-learning"
+                name="schools-and-learning"
+                type="checkbox"
+                value="schools-and-learning"
+              />
+              <label
+                class="govuk-label govuk-checkboxes__label"
+                for="schools-and-learning"
+              >
+                Schools and Learning
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="social-care"
+                name="social-care"
+                type="checkbox"
+                value="social-care"
+              />
+              <label
+                class="govuk-label govuk-checkboxes__label"
+                for="social-care"
+              >
+                Social Care
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input
+                class="govuk-checkboxes__input"
+                id="business-and-licensing"
+                name="business-and-licensing"
+                type="checkbox"
+                value="business-and-licensing"
+              />
+              <label
+                class="govuk-label govuk-checkboxes__label"
+                for="business-and-licensing"
+              >
+                Business and Licensing
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <p>
+        Documents will be shared automatically with the selected services. You
+        will not need to provide this information again once you select confirm
+      </p>
+      <p>
+        {% from "govuk/components/button/macro.njk" import govukButton %} {{
+        govukButton({ text: "Continue" }) }}
+      </p>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
