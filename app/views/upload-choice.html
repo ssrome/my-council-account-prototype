@@ -45,9 +45,8 @@ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent %}
         >
           Save progress
         </button>
-        <button class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
+        {% from "govuk/components/button/macro.njk" import govukButton %} {{
+          govukButton({ text: "Continue", href: "upload-your-document.html" }) }}
       </div>
     </form>
   </div>
