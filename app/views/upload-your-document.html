@@ -8,8 +8,8 @@ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent %}
     <h1 class="govuk-heading-xl">Upload your document</h1>
 
     <p>
-      You need to upload a clear image of your [insert chosen document], that
-      clearly shows all your details
+      You need to upload a clear image of your [insert chosen document type],
+      that clearly shows all your details
     </p>
 
     <p>
@@ -20,7 +20,7 @@ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent %}
 
     <div class="govuk-form-group">
       <label class="govuk-label" for="file-upload-1">
-        Upload [insert chosen document] here</label
+        Upload [insert chosen document type] here</label
       >
       <input
         class="govuk-file-upload"
@@ -55,6 +55,10 @@ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent %}
         makeanappointment@council.com
       </div>
     </details>
+
+    {% from "govuk/components/button/macro.njk" import govukButton %} {{
+    govukButton({ text: "Submit and continue", preventDoubleClick: true, href:
+    "#" }) }}
   </div>
 </div>
 
