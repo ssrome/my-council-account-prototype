@@ -94,13 +94,13 @@ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent %}
         If you are unable to upload evidence requested, face to face meetings
         are available by appointment only
       </p>
-      <button
-        class="govuk-button govuk-button--secondary"
-        data-module="govuk-button"
-      >
-        Save progress
-      </button>
-      <button class="govuk-button" data-module="govuk-button">Continue</button>
+      <div class="govuk-button-group">
+        {% from "govuk/components/button/macro.njk" import govukButton %} {{
+        govukButton({ text: "Save progress", classes: "govuk-button--secondary",
+        href: "sign-up.html" }) }} {% from "govuk/components/button/macro.njk"
+        import govukButton %} {{ govukButton({ text: "Continue", href:
+        "upload-choice.html" }) }}
+      </div>
     </form>
   </div>
 </div>
