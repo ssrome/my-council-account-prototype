@@ -1,0 +1,108 @@
+{% extends "layout.html" %} {% block pageTitle %} Question page template – {{
+serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()"> Back </a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Advise which type of document you would like to upload
+    </h1>
+    <form class="form" action="/url/of/next/page" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="doc-to-upload"
+                name="doc-to-upload"
+                type="radio"
+                value="england"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="doc-to-upload"
+              >
+                Photo ID - passport or drivers licence
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="doc-to-upload-2"
+                name="doc-to-upload"
+                type="radio"
+                value="proof-of-address"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="doc-to-upload-2"
+              >
+                Proof of address
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="doc-to-upload-3"
+                name="doc-to-upload"
+                type="radio"
+                value="certificate"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="doc-to-upload-3"
+              >
+                Birth or marriage/ civil partnership certificate
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="doc-to-upload-4"
+                name="doc-to-upload"
+                type="radio"
+                value="nhs-medical-card"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="doc-to-upload-4"
+              >
+                NHS medical card
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="doc-to-upload-5"
+                name="doc-to-upload"
+                type="radio"
+                value="uk-residence-permit"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="doc-to-upload-5"
+              >
+                UK residence permit
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <p>
+        If you are unable to upload evidence requested, face to face meetings
+        are available by appointment only
+      </p>
+      <button
+        class="govuk-button govuk-button--secondary"
+        data-module="govuk-button"
+      >
+        Save progress
+      </button>
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
