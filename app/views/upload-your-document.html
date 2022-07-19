@@ -1,0 +1,61 @@
+{% extends "layout.html" %} {% block pageTitle %} Content page template – {{
+serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Upload your document</h1>
+
+    <p>
+      You need to upload a clear image of your [insert chosen document], that
+      clearly shows all your details
+    </p>
+
+    <p>
+      You can use a digital camera, smartphone, or tablet to take a photo, or
+      use a scanner. If you already have a digital photo, it will need to be a
+      PNG, GIF or JPG file, and no larger than 20MB.
+    </p>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="file-upload-1">
+        Upload [insert chosen document] here</label
+      >
+      <input
+        class="govuk-file-upload"
+        id="file-upload-1"
+        name="file-upload-1"
+        type="file"
+      />
+    </div>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text"
+          >Need help uploading documents</span
+        >
+      </summary>
+      <div class="govuk-details__text">
+        You can take a photo of documents or scan them to upload here. We've
+        created a step-by-step guide on how to upload a document. We'll take you
+        back to this page after you've read the guide.
+      </div>
+    </details>
+
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text"
+          >I can't upload a photo or scan</span
+        >
+      </summary>
+      <div class="govuk-details__text">
+        If you are unable to upload evidence requested, face to face meetings
+        are available by appointment only. Please contact the council on
+        makeanappointment@council.com
+      </div>
+    </details>
+  </div>
+</div>
+
+{% endblock %}
