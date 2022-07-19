@@ -1,0 +1,56 @@
+{% extends "layout.html" %} {% block pageTitle %} Question page template – {{
+serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()"> Back </a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Upload</h1>
+    <p>Do you want to upload a</p>
+    <form class="form" action="/url/of/next/page" method="post">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="doc-choice"
+                name="doc-choice"
+                type="radio"
+                value="birth-certificate"
+              />
+              <label class="govuk-label govuk-radios__label" for="doc-choice">
+                Birth certificate
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="doc-choice-1"
+                name="doc-choice"
+                type="radio"
+                value="marriage-civil-certificate"
+              />
+              <label class="govuk-label govuk-radios__label" for="doc-choice-1">
+                Marriage/ civil partnership certificate
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="govuk-button-group">
+        <button
+          class="govuk-button govuk-button--secondary"
+          data-module="govuk-button"
+        >
+          Save progress
+        </button>
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
